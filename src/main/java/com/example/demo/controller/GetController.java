@@ -25,7 +25,10 @@ public class GetController {
     }
 
     @GetMapping({"/requestParam"})
-    public String requestParam(@Parameter(description = "이름") @RequestParam(required = false) String name, @RequestParam String email) {
+    public String requestParam(
+            @Parameter(description = "이름") @RequestParam(required = false) String name,
+            @RequestParam String email
+    ) {
         return String.format("name=%s, email=%s", name, email);
     }
 
