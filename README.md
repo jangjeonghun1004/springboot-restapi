@@ -1,22 +1,40 @@
-# **@RestController을 활용한 Rest API**
+# Rest API
+
     Get
-        @PathVariable(value = "email", required = false)
-        @RequestParam(value = "email", required = true)
+    서버에서 데이터를 검색합니다.
+    @PathVariable
+    @RequestParam
 
     Post
-        @RequestBody
+    서버로 데이터를 보내 새로운 리소스를 생성합니다.
+    @RequestBody
 
     Put
-        @RequestBody
+    서버의 기존 리소스를 업데이트하거나 교체합니다.
+    @RequestBody
+
+    Patch
+    기존 리소스를 부분적으로 업데이트합니다.
+    @RequestParam
 
     Delete
-        @PathVariable(value = "email", required = false)
-        @RequestParam(value = "email", required = true)
+    서버에서 리소스를 삭제합니다.
+    @PathVariable
+    @RequestParam
 
+# Rest API 어노테이션
 
-# **Rest API 관련 어노테이션**
-    @Parameter(description = "이름")
+    선언 : @RestController
+    설명 추가: @Parameter(description = "이름")
+    필수 여부: @PathVariable(value = "email", required = false)
+             @RequestParam(required = false)
+             @RequestBody(required = true)
 
+# Swagger
 
-# **Swagger UI**
-    http://localhost:8080/swagger-ui/index.html
+    1. Dependency 추가
+        pom.xml 참조
+    2. Config 추가
+        SwaggerConfig.java 참조
+    3. 접속 URL
+        http://localhost:8080/swagger-ui/index.html
