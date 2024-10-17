@@ -26,6 +26,7 @@
 
     선언 : @RestController
     설명 추가: @Parameter(description = "이름")
+    상세 설명: @Operation(summary = "", description = "")
     필수 여부: @PathVariable(value = "email", required = false)
              @RequestParam(required = false)
              @RequestBody(required = true)
